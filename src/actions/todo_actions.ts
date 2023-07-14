@@ -1,13 +1,13 @@
 import { todoType } from "../reducers/types/todo_state";
 import {TODO} from "./types";
 
-export const reqTodo = () => {
+export const getReqTodo = () => {
     return {
         type:TODO.REQ_TODO
     } as const;
 };
 
-export const getTodo = (data:todoType) => {
+export const getTodoSuccess = (data:todoType) => {
     return {
         type:TODO.GET_TODO,
         payload:{
@@ -18,5 +18,5 @@ export const getTodo = (data:todoType) => {
 
 
 export type TodoActions = 
-    | ReturnType<typeof reqTodo>
-    | ReturnType<typeof getTodo>
+    | ReturnType<typeof getReqTodo>
+    | ReturnType<typeof getTodoSuccess>
