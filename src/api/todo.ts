@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import axios  from "axios"
 
-export const getTodo = ( async () => {
+export const getTodo = async () => {
     try {
        const res = await axios.get('https://jsonplaceholder.typicode.com/todos');
        const data = await res.data;
@@ -15,4 +15,4 @@ export const getTodo = ( async () => {
             error
         }
     }
-})()
+};
