@@ -1,7 +1,15 @@
+import { useTodo } from "./hooks/useTodo"
+
 function App() {
+  const {todo} =  useTodo()
+
+  console.log(todo?.length);
+  
   return (
     <div>
-      hello javascript
+      {
+        todo?.map((item,index) => <div key={index}>{item.title}</div>)
+      }
     </div>
   )
 }
